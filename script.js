@@ -34,6 +34,10 @@ function selectShop(element) {
           radioButton.style.display = 'none';
           labels[index].style.display = 'none';
       }
+      const radioButtons = document.querySelectorAll('input[type="radio"]');
+      radioButtons.forEach((radioButton) => {
+        radioButton.style.display = 'none';
+      });
   });
 
   // Deselect previously selected tile if it is greater than maxTile
@@ -61,6 +65,9 @@ function addShop() {
   updateShopList();
 }
 
+
+
+
 function updateShopList() {
   const shopListDiv = document.getElementById('shop-list');
   shopListDiv.innerHTML = shops.map((shop, index) => {
@@ -75,9 +82,12 @@ function updateShopList() {
       button.addEventListener('click', () => {
           shops.splice(index, 1); // Remove the shop from the array
           updateShopList(); // Update the shop list
+          
       });
   });
+
 }
+
 
 function calculateTotalEarnings() {
   let totalCompleteEarnings = 0;
@@ -93,4 +103,13 @@ function calculateTotalEarnings() {
   resultDiv.innerHTML = `
     Total Complete Earnings: <br>$${totalCompleteEarnings.toLocaleString()}<br>
   `;
+
+  const radioButton = document.createElement('input');
+  radioButton.type = 'radio';
+  radioButton.name = 'shop-type';
+  radioButton.value = shopType;
+  radioButton.id = `shop-type-${shopType}`;
+  radioButton.className = 'custom-radio-button'; // Add the class here
+  
+  
 }
