@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/chinatown.png");
+
+  background-size: cover;
+  background-position: center;
+  color: #ffd700; /* gold text */
+  background-color: #b64300; /* red background */
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #b64300; /* red background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ffd700; /* gold shadow */
+}
+
+h1 {
+  text-align: center;
+  color: #ffd700; /* gold text */
+}
+  .shop-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffd700; /* gold text */
+}
+
+.shop-selection img {
+    width: 250px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid #b64300; /* gold border */
+    border-radius: 10px;
+}
+
+.shop-selection img.selected {
+  border: 3px solid #ffd700; /* gold border */
+  box-shadow: 0 0 10px #ffd700;
+}
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px;
+    max-width: 100px;
+    background-color: #b64300; /* red */
+    color: #ffd700; /* gold */
+    border: 2px solid #ffd700; /* gold border */
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ffd700; /* gold glow */
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #ffd700; /* gold glow when focused */
+}
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px;
+    max-width: 100px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #b64300; /* red */
+    color: #ffd700; /* gold */
+    border: 2px solid #ffd700; /* gold border */
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ffd700; /* gold glow */
+}
+
+button:hover {
+    background-color: #ffd700; /* gold */
+    color: #be3e17;
+
+  }
+  .result{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+    color: #ffd700; /* gold text */
+  }
+  .author {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    color: #ffd700; /* gold text */
+}

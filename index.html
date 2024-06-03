@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chinatown Earnings Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Chinatown Earnings Calculator</h1>
+    
+    <label>Select Shop Type:</label>
+    <div class="shop-selection">
+        <img src="images/Photo-Seafood-Teahaus.jpg" alt="Photo, Seafood, Tea House" data-shop-type="photo-seafood-tea-house" onclick="selectShop(this)">
+        <img src="images/Florist-Jewelry-TropicalFish.jpg" alt="Florist, Jewelry, Tropical Fish" data-shop-type="florist-jewelry-tropical-fish" onclick="selectShop(this)">
+        <img src="images/DimSum-Laundry-Take-Out.jpg" alt="Dim Sum, Laundry, Take-Out" data-shop-type="dim-sum-laundry-take-out" onclick="selectShop(this)">
+        <img src="images/Antiques-Factory-Restaurant.jpg" alt="Antiques, Factory, Restaurant" data-shop-type="antiques-factory-restaurant" onclick="selectShop(this)">
+    </div>
+    
+    <label for="num-tiles">Number of Tiles:</label>
+    <input type="number" id="num-tiles" min="1" max="6" value="1">
+    
+    <button onclick="addShop()">Add Shop</button>
+    <button onclick="calculateTotalEarnings()">Calculate Total Earnings</button>
+
+    <div class="shop-list" id="shop-list"></div>
+    
+    <div class="result" id="result"></div>
+  </div>
+  <script src="script.js"></script>
+  <div class="author">Author: KOOSH4</div>
+
+</body>
+</html>
