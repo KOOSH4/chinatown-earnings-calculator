@@ -32,13 +32,22 @@ const completeEarnings = {
     shops.push({ shopType: selectedShopType, numTiles, completeEarning });
     updateShopList();
   }
-  
   function updateShopList() {
     const shopListDiv = document.getElementById('shop-list');
     shopListDiv.innerHTML = shops.map((shop, index) => {
       const shopName = document.querySelector(`img[data-shop-type="${shop.shopType}"]`).alt;
-      return `<div>Shop ${index + 1}: ${shopName}, ${shop.numTiles}-tile : $${shop.completeEarning.toLocaleString()}</div>`;
+      return `<div>Shop ${index + 1}: ${shopName}, ${shop.numTiles}-tile : $${shop.completeEarning.toLocaleString()} 
+      <button id="remove-${index}" class="remove-button">X</button></div>`;
     }).join('');
+  
+    // Add event listeners to the remove buttons
+    shops.forEach((shop, index) => {
+      const button = document.getElementById(`remove-${index}`);
+      button.addEventListener('click', () => {
+        shops.splice(index, 1); // Remove the shop from the array
+        updateShopList(); // Update the shop list
+      });
+    });
   }
   
   function calculateTotalEarnings() {
