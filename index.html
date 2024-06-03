@@ -18,8 +18,21 @@
         <img src="images/Antiques-Factory-Restaurant.jpg" alt="Antiques, Factory, Restaurant" data-shop-type="antiques-factory-restaurant" onclick="selectShop(this)">
     </div>
     
-    <label for="num-tiles">Number of Tiles:</label>
-    <input type="number" id="num-tiles" min="1" max="6" value="1">
+    <label>Number of Tiles:</label>
+    <div id="tile-selection" class="tile-selection">
+        <input type="radio" id="tile-1" name="num-tiles" value="1">
+        <label for="tile-1">1</label>
+        <input type="radio" id="tile-2" name="num-tiles" value="2">
+        <label for="tile-2">2</label>
+        <input type="radio" id="tile-3" name="num-tiles" value="3">
+        <label for="tile-3">3</label>
+        <input type="radio" id="tile-4" name="num-tiles" value="4">
+        <label for="tile-4">4</label>
+        <input type="radio" id="tile-5" name="num-tiles" value="5">
+        <label for="tile-5">5</label>
+        <input type="radio" id="tile-6" name="num-tiles" value="6">
+        <label for="tile-6">6</label>
+    </div>
     
     <button onclick="addShop()">Add Shop</button>
     <button onclick="calculateTotalEarnings()">Calculate Total Earnings</button>
@@ -30,6 +43,5 @@
   </div>
   <script src="script.js"></script>
   <div class="author">Author: KOOSH4</div>
-
 </body>
 </html>
