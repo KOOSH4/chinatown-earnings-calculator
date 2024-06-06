@@ -10,7 +10,7 @@ Chinatown Earnings Calculator is a web application to calculate shop earnings in
 4. Repeat steps 2-3 to add more shops.
 5. Click "Calculate Total Earnings" to see the total earnings for all added shops.
 
-![QR Code](https://koosh4.github.io/images/qr-code.png)
+![QR Code](https://koosh4.github.io/chinatown-earnings-calculator/images/qr-code.png)
 
 ## Features
 
